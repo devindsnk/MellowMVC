@@ -1,5 +1,5 @@
 # MellowMVC
-./public/logo/logo_banner.png
+![logo](./public/logo/logo_banner.png)
 A simple PHP framework based on MVC Architecture with a custom SQL Query Builder. 
 
 Developed for the 2nd year group project SCS2202.
@@ -15,4 +15,4 @@ Architecture is built following the [course](https://www.udemy.com/course/object
 ./public/resources/mellowmvc_db.sql
 
 - Visit the site  
-http://localhost/MellowMVC/home 
+  http://localhost/MellowMVC/home 
