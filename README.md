@@ -7,9 +7,9 @@ https://www.udemy.com/course/object-oriented-php-mvc/
 
 ## How to use
 - Clone the repository to your localhost folder  
-```
-    git clone https://github.com/daredevil25/MellowMVC.git
-```
+  ```
+  git clone https://github.com/daredevil25/MellowMVC.git
+  ```
 
 - Import the SQL dump file  
 /public/resources/mellowmvc_db.sql
