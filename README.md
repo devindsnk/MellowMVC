@@ -12,8 +12,7 @@ Architecture is built following the [course](https://www.udemy.com/course/object
   ```
 
 - Import the SQL dump file  
-  <a href="data:public/resources/mellowmvc_db.sql,DATA" download="mellowmvc_db.sql">SQL dump file</a>
-  ![SQL dump file](./public/resources/mellowmvc_db.sql)
+  [a link](./public/resources/mellowmvc_db.sql)
 
 - Visit the site  
   http://localhost/MellowMVC/home 
