@@ -1,0 +1,402 @@
+/* ------This is a common stylesheet for every view------ */
+
+/* ------------------------------------------------------ */
+/* --------------STYLES ADDED BY DEVIN -------------------*/
+/* ------------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  --theme-purple: #444BF8;
+  --theme-red: #FE3D4F;
+  --theme-blue: #037AFF;
+  --bg-theme-blue: #DBEBFD;
+  --theme-black: #252631;
+  --theme-bgwhite: #F2F2F7;
+  --theme-bggrey: #8A8888;
+  --theme-grey: #50515A;
+  --theme-lightgrey: #EAEAEA;
+  --theme-disabledgrey: #CCCCCC;
+  --error-red: #DA2346;
+  --bg-error-red: #FFD8DF;
+  --success-green: #1BC657;
+  --bg-success-green: #C0F0D1;
+  --warning-yellow: #FFBF02;
+  --bg-warning-yellow: #FFF6DC;
+  --white: #FFFFFF;
+  --black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--black);
+  background-color: white;
+}
+
+header {
+  align-items: center;
+  width: 100%;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  margin: 0 50px;
+}
+
+.sub-container{
+  padding-top: 50px;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+.top-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.top-container span{
+  display: block;
+  text-align: center;
+  max-width: calc(60vw);
+  margin: auto;
+}
+.top-container .logo{
+  width: calc(50vw);
+}
+
+@media (max-width: 768px) {
+  h3{
+    font-size: 14px;
+  }
+  .top-container span{
+    font-size: 13px;
+  }
+
+  .sub-container{
+    padding-top: 40px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .content{
+    margin: 0 20px;
+  }
+}
+
+
+.form-container .inner-container{
+  margin-top: 15px;
+  padding: 30px;
+  border: #037AFF solid 2px;
+  border-radius: 6px;
+  /* min-width: 250px; */
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.form-container .btn-container{
+  padding: 10px;
+  display: flex;
+}
+
+.form-container button{
+  align-self: flex-end;
+  height: 35px;
+  padding: 4px 25px;
+}
+
+@media (max-width: 768px) {
+  .form-container .inner-container{
+    padding: 10px;
+    border:  solid 2px;
+    border-radius: 6px;
+  }
+}
+
+.textInput-group{
+  padding: 10px;
+}
+.textInput-group label{
+  display: block;
+  margin-bottom: 5px;
+}
+.textInput-group input{
+  padding: 4px;
+  width: 100%;
+  border: none;
+  border-bottom: var(--theme-bggrey) solid 2px;
+}
+
+.textInput-group input:focus{
+  border-radius: 3px;
+  border: none;
+}
+@media (max-width: 768px) {
+  .textInput-group label,
+  .textInput-group input{
+    font-size: 13px;
+  }
+}
+
+
+
+
+footer {
+  width: 100%;
+  padding-right: 10px;
+  height: 28px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+footer p {
+  font-size: 14px;
+  text-align: right;
+  color: var(--theme-grey);
+  display: block;
+}
+
+
+.error{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--error-red);
+}
+
+.content-table{
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 300px;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr{
+  background-color: var(--theme-black);
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  
+}
+
+.content-table tbody tr{
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even){
+  background-color: #f3f3f3;
+}
+
+.content-table th,
+.content-table td{
+  padding: 12px 15px;
+}
+
+
+/* Common button styles */
+
+.btn {
+  display: block;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: rgba(67, 90, 111, 0.3) 0px 0px 1px, rgba(67, 90, 111, 0.47) 0px 2px 4px -2px;
+  transition: ease-in-out 0.2s;
+  cursor: default;
+}
+
+.btn:disabled,
+.btn[disabled] {
+  pointer-events: none;
+  /* easily remove hover effect */
+}
+
+.btn.btn-filled {
+  border: none;
+  color: var(--white);
+}
+
+.btn.btn-outlined {
+  background-color: transparent;
+}
+
+.btn.btn-filled.btn-theme-purple {
+  background-color: var(--theme-purple);
+}
+
+.btn.btn-filled.btn-theme-purple:hover {
+  background-color: #3A40D8;
+  filter: drop-shadow(0px 0px 11px rgba(68, 75, 248, 0.26));
+}
+
+.btn.btn-filled.btn-theme-red {
+  background-color: var(--theme-red);
+}
+
+.btn.btn-filled.btn-error-red {
+  /* transition: 0.4s ease-in-out; */
+  background-color: var(--error-red);
+}
+
+.btn.btn-filled.btn-error-red:hover {
+  background-color: #BE2D3B;
+  box-shadow: 0px 0px 11px rgba(220, 53, 69, 0.25);
+}
+
+.btn.btn-outlined.btn-error-red:hover {
+  /* color: #BE2D3B;
+  border: 2px solid #BE2D3B; */
+  box-shadow: 0px 0px 11px rgba(220, 53, 69, 0.25);
+}
+
+.btn.btn-filled.btn-black {
+  background-color: var(--theme-black);
+}
+
+.btn.btn-filled.btn-black:hover {
+  background-color: #09090C;
+  filter: drop-shadow(0px 0px 11px rgba(0, 0, 0, 0.15))
+}
+
+.btn.btn-outlined.btn-black {
+  border: 2px solid var(--theme-black);
+  color: var(--theme-black);
+}
+
+.btn.btn-outlined.btn-black:hover {
+  background: rgba(234, 234, 234, 0.35);
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.15);
+}
+
+.btn.btn-filled.btn-grey {
+  background-color: var(--theme-grey);
+}
+
+.btn.btn-outlined.btn-error-red {
+  border: 2px solid var(--error-red);
+  color: var(--error-red);
+}
+
+.btn.btn-outlined.btn-blue {
+  border: 2px solid var(--theme-blue);
+  color: var(--theme-blue);
+}
+
+.btn.btn-filled.btn-blue {
+  background-color: var(--theme-blue);
+}
+
+.btn.btn-outlined.btn-theme-purple {
+  border: 2px solid var(--theme-purple);
+  color: var(--theme-purple);
+}
+
+.btn.btn-outlined.btn-grey {
+  border: 2px solid var(--theme-grey);
+  color: var(--theme-grey);
+}
+
+.btn.btn-filled.btn-success-green {
+  background-color: var(--success-green);
+}
+
+.btn.btn-filled.btn-success-green:hover {
+  background-color: var(--success-green);
+}
+
+.btn.btn-filled:disabled,
+.btn.btn-filled[disabled] {
+  background-color: var(--theme-disabledgrey);
+}
+
+.btn.btn-outlined:disabled,
+.btn.btn-outlined[disabled] {
+  border: 2px solid var(--theme-disabledgrey);
+  color: var(--theme-disabledgrey);
+}
+
+/* End of Common button styles */
+
+
+/* error page styles */
+
+.error404 .main-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+
+.error404 .inner-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: min-content;
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.error404 .inner-container h1 {
+  display: block;
+  font-size: 280px;
+  font-weight: 700;
+  color: var(--theme-black);
+}
+
+.error404 .btn {
+  margin-top: 20px;
+  padding: 7px;
+  width: 150px;
+}
+
+@media (max-width: 768px) {
+  .error404 .inner-container h1 {
+    font-size: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .error404 .inner-container h1 {
+    display: block;
+    font-size: 250px;
+    font-weight: 700;
+    line-height: 300px;
+    color: var(--theme-black);
+  }
+}
+
+
+/* ------------------------------------------------------ */
+/* -----------END OF STYLES ADDED BY DEVIN ---------------*/
+/* ------------------------------------------------------ */
